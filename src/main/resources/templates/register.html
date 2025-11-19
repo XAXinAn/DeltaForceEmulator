@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
+    <title>注册</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
     <div class="login-container">
-        <form th:action="@{/login}" method="post">
-            <h2>登录</h2>
-
+        <form th:action="@{/register}" method="post">
+            <h2>注册</h2>
+            
             <!-- Error Message -->
-            <div th:if="${param.error}" style="color: red; text-align: center; margin-bottom: 1rem;">
-                <p>用户名或密码错误</p>
+            <div th:if="${error}" style="color: red; text-align: center; margin-bottom: 1rem;">
+                <p th:text="${error}"></p>
             </div>
 
             <div class="input-group">
@@ -24,17 +24,19 @@
                 <label for="password">密码</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            <div class="input-group">
+                <label for="confirm-password">确认密码</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
             <div class="terms-group">
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">我已阅读并同意 <a th:href="@{/terms}" target="_blank">用户服务条款</a></label>
             </div>
-            <button type="submit">登录</button>
+            <button type="submit">注册</button>
             <div class="register-link">
-                <p>没有账号？ <a th:href="@{/register}">立即注册</a></p>
+                <p>已有账号？ <a th:href="@{/}">立即登录</a></p>
             </div>
         </form>
     </div>
-
-    <script th:src="@{/js/main.js}"></script>
 </body>
 </html>
