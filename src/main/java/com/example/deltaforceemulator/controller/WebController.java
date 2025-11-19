@@ -16,6 +16,11 @@ public class WebController {
     private UserService userService;
 
     @GetMapping("/")
+    public String redirectToLogin() {
+        return "redirect:/login";
+    }
+
+    @GetMapping("/login")
     public String loginPage() {
         return "login";
     }
@@ -39,7 +44,7 @@ public class WebController {
             model.addAttribute("error", "用户名已存在");
             return "register";
         }
-        return "redirect:/";
+        return "redirect:/login";
     }
 
     @GetMapping("/welcome")
