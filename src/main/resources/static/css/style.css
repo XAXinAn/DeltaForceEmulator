@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern font stack */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Using your background image with a relative path */
+    background-image: url('../images/deltaforce_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 2.5rem 3rem; /* Increased padding */
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Softer, more pronounced shadow */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 2rem; /* Larger title */
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 1.5rem; /* More space between inputs */
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Slightly more rounded */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Glow effect on focus */
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradient button */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 1rem; /* Add some space above the button */
+}
+
+button:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
