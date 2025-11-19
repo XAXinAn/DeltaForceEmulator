@@ -19,7 +19,6 @@ public class User implements UserDetails {
     private String password;
     private LocalDateTime createTime;
 
-    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -54,11 +53,8 @@ public class User implements UserDetails {
         this.createTime = createTime;
     }
 
-    // --- UserDetails methods ---
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // For simplicity, we're not using roles. Return an empty list.
         return Collections.emptyList();
     }
 
@@ -71,8 +67,6 @@ public class User implements UserDetails {
     public boolean isAccountNonLocked() {
         return true;
     }
-
-
 
     @Override
     public boolean isCredentialsNonExpired() {

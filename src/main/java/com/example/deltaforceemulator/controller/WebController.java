@@ -15,7 +15,7 @@ public class WebController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String loginPage() {
         return "login";
     }
@@ -39,7 +39,7 @@ public class WebController {
             model.addAttribute("error", "用户名已存在");
             return "register";
         }
-        return "redirect:/"; // 注册成功，重定向到登录页面
+        return "redirect:/";
     }
 
     @GetMapping("/welcome")

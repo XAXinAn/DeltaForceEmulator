@@ -33,9 +33,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return user;
     }
 
-    /**
-     * This is the core method for Spring Security to load user details.
-     */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("username", username));
@@ -45,9 +42,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return user;
     }
 
-    /**
-     * This method is no longer called by the main login flow, but can be kept for other purposes.
-     */
     @Override
     public User login(String username, String password) {
         UserDetails userDetails = loadUserByUsername(username);

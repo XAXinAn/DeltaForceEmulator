@@ -11,7 +11,6 @@
         <form th:action="@{/register}" method="post">
             <h2>注册</h2>
             
-            <!-- Error Message -->
             <div th:if="${error}" style="color: red; text-align: center; margin-bottom: 1rem;">
                 <p th:text="${error}"></p>
             </div>
