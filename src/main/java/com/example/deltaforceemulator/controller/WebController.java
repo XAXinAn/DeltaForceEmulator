@@ -15,7 +15,7 @@ public class WebController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/")
+    @GetMapping("/login")
     public String loginPage() {
         return "login";
     }
