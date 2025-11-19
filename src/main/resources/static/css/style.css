@@ -1,78 +1,116 @@
 body, html {
     height: 100%;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern font stack */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Using your background image with a relative path */
     background-image: url('../images/deltaforce_background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Keeps the background fixed during scroll */
+    background-attachment: fixed;
 }
 
 .login-container {
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-    padding: 2.5rem 3rem; /* Increased padding */
-    border-radius: 15px; /* Softer corners */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Softer, more pronounced shadow */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 480px;
     text-align: center;
-    backdrop-filter: blur(5px); /* Frosted glass effect */
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #333;
-    font-size: 2rem; /* Larger title */
+    font-size: 2.2rem;
     font-weight: 600;
 }
 
 .input-group {
-    margin-bottom: 1.5rem; /* More space between inputs */
+    margin-bottom: 1.2rem;
     text-align: left;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     color: #555;
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .input-group input {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.9rem;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Slightly more rounded */
+    border-radius: 8px;
     box-sizing: border-box;
+    font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Glow effect on focus */
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.terms-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.terms-group a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.terms-group a:hover {
+    text-decoration: underline;
 }
 
 button {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.9rem;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(to right, #007bff, #0056b3); /* Gradient button */
+    background: linear-gradient(to right, #4CAF50, #388E3C);
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    margin-top: 1rem; /* Add some space above the button */
 }
 
 button:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
+}
+
+.register-link {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.register-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
 }
